@@ -75,6 +75,7 @@ try {
     exit 1
 }
 
+<#
 # Check if PowerShell versoin is 7.0.0 based on requirements from https://github.com/MG-Cloudflow/Intune-Toolkit by Thiago Beier https://x.com/thiagobeier https://github.com/thiagogbeier
 $PScurrentVersion = $PSVersionTable.PSVersion
 $PSrequiredVersion = [Version]"7.0.0"
@@ -97,7 +98,7 @@ if (-not (Get-Module -ListAvailable -Name Microsoft.Graph)) {
     Write-IntuneToolkitLog $errorMessage
     exit 1
 }
-
+#>
 # Function to display the main window
 function Show-Window {
     Write-IntuneToolkitLog "Starting Show-Window"
